@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Упаковка Авито «в фарш»: обложки и воронки с высоким CTR | TSUKANOV.</title>
+    <meta name="description" content="Продающие обложки для Авито, прошивка текстов под алгоритмы, воронки и оформление магазина под ключ. Реальные кейсы: цена контакта от 54 ₽, рост заявок до +1200%.">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=12.0">
+</head>
+<body data-theme="dark" class="has-topbar">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="ambient-light" id="ambientLight"></div>
+    <div class="bg-signature"></div>
+
+    <div class="topbar">
+        <i class="fa-solid fa-fire"></i>
+        <span>Реальный кейс: <strong>цена контакта снижена с ~90 ₽ до 54 ₽.</strong> <span class="topbar-extra">Разберём ваш аккаунт бесплатно.</span></span>
+    </div>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">TSUKANOV<span>.</span></a>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html#services" class="nav-link has-dd">Услуги</a>
+                    <div class="nav-dd">
+                        <a href="sites.html"><i class="fa-solid fa-window-maximize"></i><span><span class="dd-t">Сайты и платформы</span><span class="dd-s">Чистый код, CRM, ИИ</span></span></a>
+                        <a href="avito.html"><i class="fa-solid fa-bullhorn"></i><span><span class="dd-t">Упаковка Авито</span><span class="dd-s">Вы здесь</span></span></a>
+                        <a href="geo.html"><i class="fa-solid fa-map-location-dot"></i><span><span class="dd-t">Геосервисы</span><span class="dd-s">Яндекс.Карты и 2ГИС</span></span></a>
+                    </div>
+                </div>
+                <a href="#results" class="nav-link">Результаты</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#pricing" class="nav-link">Цены</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:15px;">
+                <a href="#ai" class="btn btn-primary header-btn">Бесплатный разбор</a>
+                <button class="burger-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+        <a href="index.html" class="mobile-link">ГЛАВНАЯ</a>
+        <a href="#results" class="mobile-link" onclick="toggleMenu()">РЕЗУЛЬТАТЫ</a>
+        <a href="#cases" class="mobile-link" onclick="toggleMenu()">КЕЙСЫ</a>
+        <a href="#pricing" class="mobile-link" onclick="toggleMenu()">ЦЕНЫ</a>
+        <a href="sites.html" class="mobile-link">САЙТЫ</a>
+        <a href="geo.html" class="mobile-link">ГЕОСЕРВИСЫ</a>
+        <div class="mobile-theme-wrapper"><a href="#ai" onclick="toggleMenu()" class="btn btn-primary" style="width:100%;">БЕСПЛАТНЫЙ РАЗБОР</a></div>
+    </div>
+
+    <main>
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+        <!-- HERO -->
+        <section class="svc-hero">
+            <div class="container">
+                <div class="breadcrumb reveal"><a href="index.html">Главная</a> <span class="sep">/</span> <span>Упаковка Авито</span></div>
+                <div class="svc-hero-grid">
+                    <div class="reveal">
+                        <div class="svc-hero-eyebrow"><span class="line"></span> Маркетплейс · Авито</div>
+                        <h1>УПАКУЕМ ВАШ АВИТО <span class="text-accent">«В ФАРШ»</span></h1>
+                        <p class="svc-hero-sub">Обложки, которые пробивают баннерную слепоту, тексты под алгоритмы и воронка до контакта. Выводим объявления в ТОП за счёт визуального CTR и снижаем цену лида в 2 раза.</p>
+                        <div class="svc-hero-actions">
+                            <a href="#ai" class="btn btn-primary">Разбор аккаунта бесплатно <i class="fa-solid fa-wand-magic-sparkles" style="margin-left:8px;"></i></a>
+                            <a href="#cases" class="btn btn-ghost">Смотреть кейсы</a>
+                        </div>
+                        <div class="svc-hero-trust">
+                            <div class="t"><b>+300%</b><span>к CTR обложек</span></div>
+                            <div class="t"><b>54 ₽</b><span>цена контакта в кейсе</span></div>
+                            <div class="t"><b>×2–3</b><span>обращений в чат</span></div>
+                        </div>
+                    </div>
+                    <div class="reveal delay-1">
+                        <div class="svc-hero-visual">
+                            <img src="img/Авито_Шумоизоляция_Авто.png" alt="Обложка Авито" onerror="this.src='img/avito_1.webp'">
+                            <div class="glass-tag">
+                                <i class="fa-solid fa-bullhorn"></i>
+                                <div><b>Wills Details</b><span>Премиум-детейлинг — визуальное доминирование в выдаче</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="floating-cta" id="floatingCta"><a href="#ai" class="floating-cta-btn"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Бесплатный разбор</span></a></div>
+
+        <!-- PAIN / SOLUTION -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>ЛЬЁТЕ БЮДЖЕТ, <span class="text-accent">А ЗАЯВОК НЕТ?</span></h2>
+                    <p>На Авито решает первый кадр. Если обложка не цепляет — и алгоритм, и человек проходят мимо.</p>
+                </div>
+                <div class="pain-grid reveal delay-1">
+                    <div class="pain-col bad">
+                        <h4><i class="fa-solid fa-circle-xmark"></i> Без упаковки</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-xmark"></i> Обложки как у всех — сливаетесь в выдаче</li>
+                            <li><i class="fa-solid fa-xmark"></i> Смотрят, но не пишут</li>
+                            <li><i class="fa-solid fa-xmark"></i> Дорогой контакт, бюджет на продвижение горит</li>
+                            <li><i class="fa-solid fa-xmark"></i> Нет смыслов и отработки возражений в карточке</li>
+                            <li><i class="fa-solid fa-xmark"></i> Магазин выглядит как «доска объявлений»</li>
+                        </ul>
+                    </div>
+                    <div class="pain-col good">
+                        <h4><i class="fa-solid fa-circle-check"></i> С нашей упаковкой</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Обложки с высоким CTR — выделяетесь сразу</li>
+                            <li><i class="fa-solid fa-check"></i> Воронка из слайдов закрывает на контакт</li>
+                            <li><i class="fa-solid fa-check"></i> Цена лида падает в 2 раза при том же бюджете</li>
+                            <li><i class="fa-solid fa-check"></i> Тексты прошиты ключами под алгоритмы</li>
+                            <li><i class="fa-solid fa-check"></i> Магазин под ключ — единый премиум-стиль</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS / REAL NUMBERS -->
+        <section id="results" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label"><span class="section-label-num">01</span><span class="section-label-line"></span><span class="section-label-text">Реальные цифры</span></div>
+                    <h2>ЦИФРЫ <span class="text-accent">& РЕЗУЛЬТАТЫ</span></h2>
+                    <p>По статистике 50+ проектов в автобизнесе и бьюти. Доказательства высылаем в личку.</p>
+                </div>
+                <div class="proofs-grid reveal delay-1">
+                    <div class="proof-card">
+                        <img src="img/avitoproof1.jpg" alt="Кейс 1">
+                        <div class="proof-text"><div class="ui-badge dark">Авто · с нуля</div><h4>Ремонт ЭБУ отопителей</h4><p>Запуск аккаунта с нуля. 0 отзывов на старте — выстроили доверие через визуал и смыслы. Пошли первые целевые заявки.</p></div>
+                    </div>
+                    <div class="proof-card">
+                        <img src="img/avitoproof2.jpg" alt="Кейс 2">
+                        <div class="proof-text"><div class="ui-badge dark">Beauty</div><h4>Рост заявок +1200%</h4><p><strong>254 просмотра (+206%), 22 заявки за неделю. Контакт — 79 ₽.</strong> В нише, где «нет клиентов», сделали стабильный поток.</p></div>
+                    </div>
+                    <div class="proof-card">
+                        <img src="img/avitoproof3.jpg" alt="Кейс 3">
+                        <div class="proof-text"><div class="ui-badge dark">Авторемонт</div><h4>Цена лида ×2 ниже</h4><p><strong>553 просмотра (+22%), 45 контактов. Заявка → 54 ₽.</strong> Снизили цену контакта с ~90 ₽ до 54 ₽ при том же бюджете.</p></div>
+                    </div>
+                </div>
+                <div class="stats-strip reveal delay-1" style="margin-top:50px;">
+                    <div class="stat-box"><div class="num">+<span data-count="300" data-suffix="%">0</span></div><div class="lbl">к визуальному CTR</div></div>
+                    <div class="stat-box"><div class="num">+<span data-count="4" data-suffix="–5%">0</span></div><div class="lbl">к конверсии в контакт</div></div>
+                    <div class="stat-box"><div class="num">×<span data-count="2" data-suffix="–3">0</span></div><div class="lbl">обращений в чат</div></div>
+                    <div class="stat-box"><div class="num"><span data-count="50" data-suffix="+">0</span></div><div class="lbl">проектов в автобизнесе</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="cases" class="section section-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label"><span class="section-label-num">02</span><span class="section-label-line"></span><span class="section-label-text">Портфолио обложек</span></div>
+                    <h2>ОБЛОЖКИ, КОТОРЫЕ <span class="text-accent">ВЫИГРЫВАЮТ ВЫДАЧУ</span></h2>
+                    <p>Так выглядят объявления, на которые кликают именно вас.</p>
+                </div>
+                <div class="masonry reveal delay-1">
+                    <div class="m-item"><img src="img/avito_1.webp" alt="Wills Details"><div class="m-cap"><b>Wills Details</b><span>Премиум-детейлинг</span></div></div>
+                    <div class="m-item"><img src="img/Авито_Шумоизоляция_4двери_ПОЛНАЯ.png" alt="Шумоизоляция"><div class="m-cap"><b>Шумоизоляция авто</b><span>Полный пакет</span></div></div>
+                    <div class="m-item"><img src="img/avito_3.webp" alt="Обложка"></div>
+                    <div class="m-item"><img src="img/Авито_РУЛЬ_ПЕРЕТЯЖКА.png" alt="Перетяжка руля"><div class="m-cap"><b>Перетяжка руля</b><span>Авто-ателье</span></div></div>
+                    <div class="m-item"><img src="img/avito_6.webp" alt="Обложка"></div>
+                    <div class="m-item"><img src="img/Авито_ПОДСВЕТКА.png" alt="Подсветка салона"><div class="m-cap"><b>Подсветка салона</b><span>Авто-тюнинг</span></div></div>
+                    <div class="m-item"><img src="img/avito_8.webp" alt="Обложка"></div>
+                    <div class="m-item"><img src="img/avito_11.webp" alt="Check Expert"><div class="m-cap"><b>Check Expert</b><span>Автоподбор и проверка</span></div></div>
+                    <div class="m-item"><img src="img/avito_4.webp" alt="Обложка"></div>
+                    <div class="m-item"><img src="img/avito_13.webp" alt="Обложка"></div>
+                    <div class="m-item"><img src="img/avito_9.webp" alt="Обложка"></div>
+                    <div class="m-item"><img src="img/avito_15.webp" alt="Обложка"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -->
+        <section id="pricing" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label"><span class="section-label-num">03</span><span class="section-label-line"></span><span class="section-label-text">Цены</span></div>
+                    <h2>ФОРМАТЫ <span class="text-accent">УПАКОВКИ</span></h2>
+                    <p>Точную смету называем после бесплатного разбора вашего аккаунта.</p>
+                </div>
+                <div class="avito-pricing-box reveal delay-1">
+                    <div class="a-price-item"><h4>Базовая воронка</h4><p>Набор из 5–7 слайдов: обложка + смыслы + закрытие на звонок.</p><div class="a-price-tag">от 5 000 ₽</div></div>
+                    <div class="a-price-item"><h4>Магазин под ключ</h4><p>Оформление магазина на Авито + сетка объявлений в едином стиле.</p><div class="a-price-tag">от 25 000 ₽</div></div>
+                    <div class="a-price-item a-analytics"><h4><i class="fa-solid fa-chart-pie text-accent"></i> Точки роста</h4><p>+4–5% к конверсии из просмотра в контакт, рост обращений в 2–3 раза. <em>Доказательства высылаем в ЛС.</em></p></div>
+                </div>
+                <div class="mini-cta reveal delay-1"><a href="#ai" class="btn btn-primary">Узнать цену для своей ниши</a></div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label"><span class="section-label-num">04</span><span class="section-label-line"></span><span class="section-label-text">Как мы работаем</span></div>
+                    <h2>ОТ РАЗБОРА <span class="text-accent">ДО РОСТА ЗАЯВОК</span></h2>
+                </div>
+                <div class="process-grid reveal delay-1">
+                    <div class="process-step"><div class="step-n">1</div><h4>Разбор аккаунта</h4><p>Бесплатно смотрим вашу нишу, конкурентов и текущие метрики. Находим, где теряются деньги.</p><span class="step-time">бесплатно</span></div>
+                    <div class="process-step"><div class="step-n">2</div><h4>Стратегия и смыслы</h4><p>Собираем оффер, отрабатываем возражения, прописываем тексты под алгоритмы.</p><span class="step-time">1–2 дня</span></div>
+                    <div class="process-step"><div class="step-n">3</div><h4>Дизайн обложек</h4><p>Рисуем продающие обложки и воронку из слайдов под высокий CTR.</p><span class="step-time">2–4 дня</span></div>
+                    <div class="process-step"><div class="step-n">4</div><h4>Запуск и рост</h4><p>Публикуем, отслеживаем метрики и точки роста. Масштабируем то, что работает.</p><span class="step-time">+ контроль</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI SECTION -->
+        <section id="ai" class="section ai-section section-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label"><span class="section-label-num">05</span><span class="section-label-line"></span><span class="section-label-text">Бесплатно · 15 секунд</span></div>
+                    <h2>РАЗБЕРЁМ ВАШ АВИТО <br><span class="text-accent">И НАЙДЁМ ТОЧКИ РОСТА</span></h2>
+                    <p>Ответьте на 3 вопроса — ИИ оценит, что мешает заявкам, а менеджер пришлёт план, как снизить цену лида.</p>
+                </div>
+                <div class="reveal delay-1" data-ai-funnel="avito"></div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head reveal"><h2>ЧАСТЫЕ <span class="text-accent">ВОПРОСЫ</span></h2></div>
+                <div class="faq-wrap reveal delay-1">
+                    <div class="faq-item"><button class="faq-q">У меня новый аккаунт без отзывов — есть смысл? <span class="ic"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><div class="faq-a-inner">Да. У нас есть кейсы запуска с полного нуля: доверие строится упаковкой и смыслами. Первые целевые заявки приходят и без истории отзывов.</div></div></div>
+                    <div class="faq-item"><button class="faq-q">Вы только рисуете обложки или ведёте аккаунт? <span class="ic"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><div class="faq-a-inner">Базово — упаковка: обложки, тексты, воронка, оформление магазина. Дальше помогаем с метриками и точками роста. Объём обсуждаем под вашу задачу.</div></div></div>
+                    <div class="faq-item"><button class="faq-q">Как быстро будет результат? <span class="ic"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><div class="faq-a-inner">Рост CTR и просмотров обычно видно в первые недели после замены обложек. В кейсах — рост заявок и снижение цены контакта уже на старте.</div></div></div>
+                    <div class="faq-item"><button class="faq-q">Работаете с моей нишей? <span class="ic"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><div class="faq-a-inner">Сильнее всего в авто, ремонте, строительстве, бьюти и услугах. Но подход универсален — на разборе скажем честно, есть ли смысл именно в вашем случае.</div></div></div>
+                    <div class="faq-item"><button class="faq-q">Дадите гарантии по цифрам? <span class="ic"><i class="fa-solid fa-plus"></i></span></button><div class="faq-a"><div class="faq-a-inner">Мы показываем реальные кейсы и метрики, но не обещаем «волшебных» цифр вслепую. После разбора аккаунта дадим честный прогноз по вашей ситуации.</div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <h2>СНИЗИМ ЦЕНУ ЛИДА В 2 РАЗА</h2>
+                    <p>Пришлите ссылку на аккаунт — бесплатно разберём и покажем, где теряются заявки.</p>
+                    <div class="cta-actions">
+                        <a href="#ai" class="btn btn-primary">Получить разбор</a>
+                        <a href="https://t.me/Maxicosss" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-telegram" style="margin-right:8px;"></i> Написать в Telegram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo">TSUKANOV<span>.</span></a>
+                    <p style="color:var(--text-muted);font-size:14px;max-width:280px;">Digital-агентство и архитектура брендов. Делаем так, чтобы у вас покупали дорого.</p>
+                    <div class="footer-soc">
+                        <a href="https://t.me/Maxicosss" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://wa.me/79385557584" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+79385557584" aria-label="Телефон"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+                <div><h5>Услуги</h5><a href="sites.html">Сайты и платформы</a><a href="avito.html">Упаковка Авито</a><a href="geo.html">Геосервисы</a></div>
+                <div><h5>На этой странице</h5><a href="#results">Результаты</a><a href="#cases">Кейсы</a><a href="#pricing">Цены</a><a href="#ai">AI-разбор</a></div>
+                <div><h5>Контакты</h5><a href="https://t.me/Maxicosss" target="_blank">Telegram: @Maxicosss</a><a href="https://wa.me/79385557584" target="_blank">WhatsApp</a><a href="tel:+79385557584">+7 938 555-75-84</a></div>
+            </div>
+            <div class="copyright">© 2026 Maxim Tsukanov. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <div class="article-modal-overlay" id="articleModal"><div class="article-modal-content"><button class="close-article" onclick="closeArticle()"><i class="fa-solid fa-xmark"></i></button><div class="article-body" id="articleBodyContent"></div></div></div>
+    <div class="article-modal-overlay" id="contactModal" style="display:flex; align-items:center; justify-content:center;">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header"><h3>НАПИСАТЬ ЛИЧНО</h3><p>Выберите удобный мессенджер — ответим напрямую, без долгих форм.</p></div>
+            <div class="modal-direct-contacts" style="margin-top:30px;">
+                <a href="https://t.me/Maxicosss" target="_blank" class="btn btn-primary direct-btn tg-btn" style="margin-bottom:15px;border:none;box-shadow:0 10px 30px rgba(42,171,238,0.2);"><i class="fa-brands fa-telegram"></i> Написать в Telegram</a>
+                <a href="https://wa.me/79385557584" target="_blank" class="btn btn-ghost direct-btn phone-btn" style="margin-bottom:15px;"><i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> Написать в WhatsApp</a>
+                <a href="tel:+79385557584" class="btn btn-ghost direct-btn"><i class="fa-solid fa-phone"></i> Позвонить напрямую</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=12.0"></script>
+</body>
+</html>

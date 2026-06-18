@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSUKANOV. | Цифровая архитектура бизнеса — сайты, Авито, геосервисы</title>
+    <meta name="description" content="Команда узких специалистов: премиальные сайты на чистом коде, упаковка Авито с ростом конверсии, продвижение в Яндекс.Картах и 2ГИС. Бесплатная AI-диагностика продаж.">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=12.0">
+</head>
+<body data-theme="dark" class="has-topbar">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="ambient-light" id="ambientLight"></div>
+    <div class="bg-signature"></div>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <i class="fa-solid fa-bolt"></i>
+        <span>Принимаем проекты — <strong>осталось 2 слота на месяц.</strong> <span class="topbar-extra">Бесплатная AI-диагностика продаж за 15 секунд.</span></span>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">TSUKANOV<span>.</span></a>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="#paths" class="nav-link has-dd">Услуги</a>
+                    <div class="nav-dd">
+                        <a href="sites.html"><i class="fa-solid fa-window-maximize"></i><span><span class="dd-t">Сайты и платформы</span><span class="dd-s">Чистый код, CRM, ИИ, оплаты</span></span></a>
+                        <a href="avito.html"><i class="fa-solid fa-bullhorn"></i><span><span class="dd-t">Упаковка Авито</span><span class="dd-s">Обложки и воронки «в фарш»</span></span></a>
+                        <a href="geo.html"><i class="fa-solid fa-map-location-dot"></i><span><span class="dd-t">Геосервисы</span><span class="dd-s">Яндекс.Карты и 2ГИС</span></span></a>
+                    </div>
+                </div>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#team" class="nav-link">Команда</a>
+                <a href="#why-us" class="nav-link">О нас</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:15px;">
+                <a href="#ai" class="btn btn-primary header-btn">Бесплатная диагностика</a>
+                <button class="burger-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+        <a href="sites.html" class="mobile-link">САЙТЫ</a>
+        <a href="avito.html" class="mobile-link">АВИТО</a>
+        <a href="geo.html" class="mobile-link">ГЕОСЕРВИСЫ</a>
+        <a href="#cases" class="mobile-link" onclick="toggleMenu()">КЕЙСЫ</a>
+        <a href="#team" class="mobile-link" onclick="toggleMenu()">КОМАНДА</a>
+        <div class="mobile-theme-wrapper">
+            <a href="#ai" onclick="toggleMenu()" class="btn btn-primary" style="width:100%;">AI-ДИАГНОСТИКА</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <div class="ui-badge dark hero-badge-anim" style="margin-bottom:24px;">
+                        <span class="badge-dot"></span> Живая команда из 4 узких специалистов
+                    </div>
+                    <h1>ЦИФРОВАЯ <br> АРХИТЕКТУРА <br> БИЗНЕСА</h1>
+                    <p class="hero-subtitle">
+                        Сайты, упаковка Авито и геосервисы для тех, кто хочет продавать дороже.
+                        Не шаблоны и фриланс-«сделаю всё» — отдел из профессионалов под ваш результат. Выберите ваш путь:
+                    </p>
+
+                    <div class="hero-paths" id="paths">
+                        <a href="sites.html" class="hero-path-card">
+                            <div class="hpc-icon"><i class="fa-solid fa-window-maximize"></i></div>
+                            <div class="hpc-text">
+                                <strong>Нужен сайт или платформа</strong>
+                                <span>Чистый код, CRM, ИИ-помощник, оплаты, защита по 152-ФЗ</span>
+                            </div>
+                            <div class="hpc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        </a>
+                        <a href="avito.html" class="hero-path-card">
+                            <div class="hpc-icon hpc-icon-b2b"><i class="fa-solid fa-bullhorn"></i></div>
+                            <div class="hpc-text">
+                                <strong>Упаковка Авито «в фарш»</strong>
+                                <span>Обложки с высоким CTR, воронки, снижение цены лида</span>
+                            </div>
+                            <div class="hpc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        </a>
+                        <a href="geo.html" class="hero-path-card">
+                            <div class="hpc-icon" style="background:rgba(201,162,75,0.12);border-color:rgba(201,162,75,0.25);color:#C9A24B;"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div class="hpc-text">
+                                <strong>Продвижение в геосервисах</strong>
+                                <span>Яндекс.Карты и 2ГИС: ТОП выдачи, звонки и маршруты</span>
+                            </div>
+                            <div class="hpc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <a href="#ai" class="hero-meta-link"><i class="fa-solid fa-wand-magic-sparkles"></i> Бесплатная AI-диагностика</a>
+                        <span class="hero-meta-sep">·</span>
+                        <a href="#cases" class="hero-meta-link"><i class="fa-solid fa-images"></i> Кейсы</a>
+                        <span class="hero-meta-sep">·</span>
+                        <a href="#team" class="hero-meta-link"><i class="fa-solid fa-users"></i> Команда</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-hint">
+                <span>Прокрутите</span>
+                <div class="scroll-arrow-wrap"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+        </section>
+
+        <!-- FLOATING CTA -->
+        <div class="floating-cta" id="floatingCta">
+            <a href="#ai" class="floating-cta-btn">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Бесплатная диагностика</span>
+            </a>
+        </div>
+
+        <!-- STATS STRIP (LIGHT) -->
+        <section class="section section-light" style="padding:90px 0;">
+            <div class="container">
+                <div class="stats-strip reveal">
+                    <div class="stat-box"><div class="num"><span data-count="50" data-suffix="+">0</span></div><div class="lbl">проектов в автобизнесе и бьюти</div></div>
+                    <div class="stat-box"><div class="num"><span data-count="300" data-suffix="%">0</span></div><div class="lbl">рост CTR обложек на Авито</div></div>
+                    <div class="stat-box"><div class="num">×<span data-count="2">0</span></div><div class="lbl">рост среднего чека за счёт упаковки</div></div>
+                    <div class="stat-box"><div class="num"><span data-count="4" data-suffix="–7">0</span></div><div class="lbl">дней до запуска сайта</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 ПУТИ — РАЗВЁРНУТО -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label">
+                        <span class="section-label-num">01</span>
+                        <span class="section-label-line"></span>
+                        <span class="section-label-text">Три направления</span>
+                    </div>
+                    <h2>ВЫБЕРИТЕ ТО, <br><span class="text-accent">ЧТО НУЖНО ИМЕННО ВАМ</span></h2>
+                    <p>Каждое направление — отдельная страница с кейсами, ценами и разбором. Не нужно искать — переходите прямо в свою тему.</p>
+                </div>
+
+                <div class="services-grid reveal delay-1">
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-num">Направление 01</div>
+                            <div class="service-icon-wrap"><i class="fa-solid fa-window-maximize"></i></div>
+                            <div class="service-tag">Web-разработка</div>
+                            <h3>Сайты и платформы</h3>
+                            <p class="service-desc">От сайта-визитки до интернет-магазина и сложной платформы с личным кабинетом. Чистый код, который летает и выглядит как приложение из AppStore.</p>
+                            <div class="service-usp"><i class="fa-solid fa-bolt text-accent"></i>Интеграция ИИ-помощника, CRM, оплат и защита по 152-ФЗ.</div>
+                            <div class="service-footer">
+                                <div class="service-price">от 30 000 ₽</div>
+                                <a href="sites.html" class="btn btn-primary service-btn">Смотреть <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card featured-service">
+                        <div class="service-card-inner">
+                            <div class="service-num">Направление 02</div>
+                            <div class="service-icon-wrap"><i class="fa-solid fa-bullhorn"></i></div>
+                            <div class="service-tag">Маркетплейс</div>
+                            <h3>Упаковка Авито</h3>
+                            <p class="service-desc">Продающие обложки, прошивка текстов под алгоритмы, воронка из слайдов и оформление магазина «под ключ». Пробиваем баннерную слепоту конкурентов.</p>
+                            <div class="service-usp"><i class="fa-solid fa-bolt text-accent"></i>Реальные кейсы: цена контакта с ~90 ₽ до 54 ₽, рост заявок до +1200%.</div>
+                            <div class="service-footer">
+                                <div class="service-price">от 5 000 ₽</div>
+                                <a href="avito.html" class="btn btn-primary service-btn">Смотреть <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-num">Направление 03</div>
+                            <div class="service-icon-wrap" style="background:rgba(201,162,75,0.12);border-color:rgba(201,162,75,0.25);color:#C9A24B;"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div class="service-tag">Локальный трафик</div>
+                            <h3>Геосервисы</h3>
+                            <p class="service-desc">Вывод карточки в ТОП Яндекс.Карт и 2ГИС, работа с отзывами и рейтингом, визуальная упаковка профиля. Горячие клиенты, которые ищут вас рядом прямо сейчас.</p>
+                            <div class="service-usp"><i class="fa-solid fa-bolt text-accent"></i>Больше звонков и проложенных маршрутов из навигатора.</div>
+                            <div class="service-footer">
+                                <div class="service-price">от 20 000 ₽</div>
+                                <a href="geo.html" class="btn btn-primary service-btn">Смотреть <i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="text-align:center; color:var(--text-muted); margin-top:36px; font-size:14px;">
+                    Вы эксперт или фрилансер и хотите личный бренд? <a href="sites.html#experts" style="color:var(--accent); text-decoration:none;">Это тоже к нам →</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- AI SECTION -->
+        <section id="ai" class="section ai-section section-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label">
+                        <span class="section-label-num">02</span>
+                        <span class="section-label-line"></span>
+                        <span class="section-label-text">Бесплатно · 15 секунд</span>
+                    </div>
+                    <h2>УЗНАЙТE, ЧТО МЕШАЕТ <br><span class="text-accent">ВАШИМ ПРОДАЖАМ</span></h2>
+                    <p>Ответьте на 3 вопроса — ИИ моментально разберёт вашу ситуацию и покажет точки роста. Дальше менеджер пришлёт конкретный план. Без звонков-роботов и спама.</p>
+                </div>
+                <div class="reveal delay-1" data-ai-funnel="hub"></div>
+            </div>
+        </section>
+
+        <!-- ПОЧЕМУ МЫ -->
+        <section id="why-us" class="section why-us-section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-label">
+                        <span class="section-label-num">03</span>
+                        <span class="section-label-line"></span>
+                        <span class="section-label-text">Почему нам доверяют дорогой чек</span>
+                    </div>
+                    <h2>НЕ ФРИЛАНСЕР-ОДИНОЧКА. <br><span class="text-accent">ЖИВАЯ КОМАНДА.</span></h2>
+                    <p>Три принципа, на которых строится каждый наш проект.</p>
+                </div>
+                <div class="why-us-grid reveal delay-1">
+                    <div class="why-card">
+                        <div class="why-num">I</div>
+                        <div class="why-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                        <h3>Сначала диагноз</h3>
+                        <p>Анализируем ваши цифры и предлагаем только то, что окупится. Никакого навязывания лишних услуг — только то, что принесёт деньги.</p>
+                    </div>
+                    <div class="why-card why-card-center">
+                        <div class="why-num">II</div>
+                        <div class="why-icon"><i class="fa-solid fa-users-gear"></i></div>
+                        <h3>Команда узких спецов</h3>
+                        <p>У нас нет «человека-оркестра». Дизайн делает арт-директор, код пишет backend-программист, контент снимает оператор. Каждый — лучший в своём деле.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-num">III</div>
+                        <div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3>Legal-friendly</h3>
+                        <p>Сайты проектируются с учётом законов РФ и РБ, защищая владельца от блокировок и штрафов с первого дня запуска.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="team" class="section bg-darker">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>УПРАВЛЯЮЩИЕ <span class="text-accent">ПАРТНЁРЫ</span></h2>
+                    <p>Лица, которые лично контролируют каждый этап и отвечают за окупаемость ваших инвестиций.</p>
+                </div>
+                <div class="team-grid reveal delay-1" style="grid-template-columns:repeat(4,1fr);">
+                    <div class="team-card">
+                        <div class="team-img-wrapper"><img src="img/tsukanov.jpg" alt="Максим Цуканов" class="team-img"></div>
+                        <div class="team-info"><h3>Максим Цуканов</h3><p class="team-role">Основатель & Арт-директор</p><p class="team-desc">Лично контролирую архитектуру каждого проекта. Никаких шаблонов — чистый код, нейросети и система, которая продаёт за вас.</p></div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-wrapper"><img src="img/kirllov.jpg" alt="Герман Кириллов" class="team-img"></div>
+                        <div class="team-info"><h3>Герман Кириллов</h3><p class="team-role">Lead Full-Stack Developer</p><p class="team-desc">Проектирую backend-архитектуру, базы данных и интеграции с нейросетями. Превращаю визуал в безотказный механизм.</p></div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-wrapper"><img src="img/openking.jpg" alt="Антон Опенкин" class="team-img"></div>
+                        <div class="team-info"><h3>Антон Опенкин</h3><p class="team-role">Head of Production</p><p class="team-desc">Кинематографичный контент: премиальная предметная съёмка и видео, которые с первой секунды транслируют статус бренда.</p></div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-wrapper"><img src="img/karina.jpg" alt="Карина" class="team-img"></div>
+                        <div class="team-info"><h3>Карина</h3><p class="team-role">Партнёр по развитию на Авито</p><p class="team-desc">Системный маркетинг на Авито: пробиваю баннерную слепоту конкурентов и снижаю стоимость целевого контакта в 2 раза.</p></div>
+                    </div>
+                </div>
+                <div class="mini-cta reveal delay-1">
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="btn btn-ghost"><i class="fa-solid fa-comment-dots" style="margin-right:8px;"></i> Написать команде лично</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASES TEASER -->
+        <section id="cases" class="section section-light">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>НАМ ДОВЕРЯЮТ ПРОЕКТЫ <br><span class="text-accent">С ВЫСОКИМ ЧЕКОМ</span></h2>
+                    <p>Несколько проектов из портфолио. Полные кейсы — внутри направлений.</p>
+                </div>
+
+                <div class="web-cases-grid reveal delay-1">
+                    <div class="web-case-card card-light">
+                        <div class="w-case-img"><img src="img/vitanic.jpg" alt="Vitanic"></div>
+                        <div class="w-case-info"><div class="ui-badge dark">Сайты · E-Commerce</div><h3>Бренд косметики VITANIC</h3><p>Премиальный магазин для селебрити-эксперта Виталия Рабецкого (1.6 млн в TikTok). Высоконагруженная архитектура под массовый трафик.</p></div>
+                    </div>
+                    <div class="web-case-card card-light">
+                        <div class="w-case-img"><img src="img/tais.jpg" alt="Pearl by Tais"></div>
+                        <div class="w-case-info"><div class="ui-badge dark">Сайты · Premium Beauty</div><h3>Pearl by Tais Рыбакина</h3><p>Web-экосистема для бренда Таис Рыбакиной (430K+ в Instagram). Утончённый минимализм и UX, повышающий средний чек.</p></div>
+                    </div>
+                    <div class="web-case-card card-light">
+                        <div class="w-case-img"><img src="img/avito_1.webp" alt="Wills Details"></div>
+                        <div class="w-case-info"><div class="ui-badge dark">Авито · Detailing</div><h3>Wills Details — упаковка Авито</h3><p>Обложки и воронка для премиум-детейлинга. Визуальное доминирование в выдаче и рост обращений в чат.</p></div>
+                    </div>
+                    <div class="web-case-card card-light">
+                        <div class="w-case-img"><img src="img/yandex.png" alt="Яндекс Карты"></div>
+                        <div class="w-case-info"><div class="ui-badge dark">Геосервисы · SEO</div><h3>Рост трафика с Яндекс.Карт</h3><p>SEO-упаковка профиля и работа с отзывами: больше проложенных маршрутов и прямых звонков из навигатора.</p></div>
+                    </div>
+                </div>
+
+                <div class="mini-cta reveal delay-1" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+                    <a href="sites.html#cases" class="btn btn-ghost">Кейсы сайтов</a>
+                    <a href="avito.html#cases" class="btn btn-ghost">Кейсы Авито</a>
+                    <a href="geo.html#cases" class="btn btn-ghost">Кейсы геосервисов</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>ИНДУСТРИАЛЬНАЯ <span class="text-accent">ЭКСПЕРТИЗА</span></h2>
+                    <p>Как мы думаем о продажах, дизайне и автоматизации.</p>
+                </div>
+                <div class="blog-grid reveal delay-1">
+                    <article class="blog-card" onclick="openArticle('article-1')"><div class="ui-badge success b-tag">Аналитика</div><h3>Почему автосалоны теряют 60% заявок из-за сайтов?</h3><span class="read-more">Читать статью <i class="fa-solid fa-arrow-right"></i></span></article>
+                    <article class="blog-card" onclick="openArticle('article-2')"><div class="ui-badge dark b-tag">Стратегия</div><h3>Как дизайн позволяет поднять средний чек x2</h3><span class="read-more">Читать статью <i class="fa-solid fa-arrow-right"></i></span></article>
+                    <article class="blog-card" onclick="openArticle('article-3')"><div class="ui-badge accent b-tag">Vision 2026</div><h3>Тренды автоматизации: интерактивный Web</h3><span class="read-more">Читать статью <i class="fa-solid fa-arrow-right"></i></span></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <h2>ГОТОВЫ ПРОДАВАТЬ ДОРОЖЕ?</h2>
+                    <p>Начните с бесплатной AI-диагностики — или напишите менеджеру напрямую. Закрепим за вами один из оставшихся слотов.</p>
+                    <div class="cta-actions">
+                        <a href="#ai" class="btn btn-primary">Пройти диагностику</a>
+                        <a href="javascript:void(0)" onclick="openContactModal()" class="btn btn-ghost">Написать в личку</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="logo">TSUKANOV<span>.</span></a>
+                    <p style="color:var(--text-muted);font-size:14px;max-width:280px;">Digital-агентство и архитектура брендов. Делаем так, чтобы у вас покупали дорого.</p>
+                    <div class="footer-soc">
+                        <a href="https://t.me/Maxicosss" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://wa.me/79385557584" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+79385557584" aria-label="Телефон"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Услуги</h5>
+                    <a href="sites.html">Сайты и платформы</a>
+                    <a href="avito.html">Упаковка Авито</a>
+                    <a href="geo.html">Геосервисы</a>
+                    <a href="sites.html#experts">Личный бренд</a>
+                </div>
+                <div>
+                    <h5>Компания</h5>
+                    <a href="#team">Команда</a>
+                    <a href="#why-us">О нас</a>
+                    <a href="#cases">Кейсы</a>
+                    <a href="#blog">Блог</a>
+                </div>
+                <div>
+                    <h5>Контакты</h5>
+                    <a href="https://t.me/Maxicosss" target="_blank">Telegram: @Maxicosss</a>
+                    <a href="https://wa.me/79385557584" target="_blank">WhatsApp</a>
+                    <a href="tel:+79385557584">+7 938 555-75-84</a>
+                    <a href="#ai">AI-диагностика</a>
+                </div>
+            </div>
+            <div class="copyright">© 2026 Maxim Tsukanov. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <!-- МОДАЛКИ -->
+    <div class="article-modal-overlay" id="articleModal"><div class="article-modal-content"><button class="close-article" onclick="closeArticle()"><i class="fa-solid fa-xmark"></i></button><div class="article-body" id="articleBodyContent"></div></div></div>
+
+    <div class="article-modal-overlay" id="contactModal" style="display:flex; align-items:center; justify-content:center;">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>НАПИСАТЬ ЛИЧНО</h3>
+                <p>Выберите удобный мессенджер — ответим напрямую, без долгих форм. Все заявки приходят лично основателю.</p>
+            </div>
+            <div class="modal-direct-contacts" style="margin-top:30px;">
+                <a href="https://t.me/Maxicosss" target="_blank" class="btn btn-primary direct-btn tg-btn" style="margin-bottom:15px;border:none;box-shadow:0 10px 30px rgba(42,171,238,0.2);"><i class="fa-brands fa-telegram"></i> Написать в Telegram</a>
+                <a href="https://wa.me/79385557584" target="_blank" class="btn btn-ghost direct-btn phone-btn" style="margin-bottom:15px;"><i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> Написать в WhatsApp</a>
+                <a href="tel:+79385557584" class="btn btn-ghost direct-btn"><i class="fa-solid fa-phone"></i> Позвонить напрямую</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=12.0"></script>
+</body>
+</html>
