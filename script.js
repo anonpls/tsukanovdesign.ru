@@ -147,10 +147,10 @@ function initCounters() {
 }
 
 /* ==========================================================================
-   4. ИИ-ВОРОНКА (каркас — без бэкенда)
-   Анализ генерируется на фронте по ответам. Реальная заявка дублируется
-   менеджеру: на сабмите открывается WhatsApp/Telegram с готовым текстом.
-   Точка интеграции бэкенда: window.TSUKANOV_SUBMIT_LEAD(payload).
+   4. ИИ-ВОРОНКА
+   Персональный разбор запрашивается у Flask OpenRouter endpoint.
+   Если endpoint недоступен, используется локальный безопасный fallback.
+   Реальная заявка дублируется менеджеру через WhatsApp/Telegram.
    ========================================================================== */
 
 const AI_CONFIG = {
@@ -362,28 +362,59 @@ function initAiFunnel(root) {
         });
     });
 
-    function runAnalysis() {
+    async function runAnalysis() {
         show('analyzing'); setDots(2);
         const typed = root.querySelector('.ai-analyzing .typed');
-        const lines = ["Читаю ваши ответы…", "Сравниваю с 50+ проектами в нише…", "Считаю точки роста…", "Формирую разбор…"];
+        const lines = ["Читаю ваши ответы…", "Отправляю контекст в нейросеть…", "Собираю персональные гипотезы…", "Формирую разбор…"];
         let i = 0; typed.textContent = lines[0];
         const tmr = setInterval(() => { i++; if (lines[i]) typed.textContent = lines[i]; }, 700);
-        setTimeout(() => { clearInterval(tmr); renderResult(); }, 3000);
+        const startedAt = Date.now();
+        const aiResult = await requestOpenRouterAnalysis();
+        const left = Math.max(0, 2200 - (Date.now() - startedAt));
+        setTimeout(() => { clearInterval(tmr); renderResult(aiResult); }, left);
     }
 
-    function renderResult() {
-        const a = AI_ANALYSIS[state.pain] || AI_ANALYSIS.other;
+    async function requestOpenRouterAnalysis() {
+        const fallback = AI_ANALYSIS[state.pain] || AI_ANALYSIS.other;
+        try {
+            const response = await fetch('/api/ai-diagnosis', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    context: ctx,
+                    niche: state.nicheT,
+                    pain: state.painT,
+                    message: state.text
+                })
+            });
+            if (!response.ok) throw new Error(`OpenRouter endpoint error: ${response.status}`);
+            const data = await response.json();
+            if (!data || !data.d || !Array.isArray(data.fix) || !Array.isArray(data.eff)) throw new Error('Bad AI response shape');
+            return {
+                d: data.d,
+                fix: data.fix.slice(0, 4),
+                eff: data.eff.slice(0, 2),
+                source: 'openrouter'
+            };
+        } catch (error) {
+            console.warn('[TSUKANOV AI fallback]', error);
+            return { ...fallback, source: 'fallback' };
+        }
+    }
+
+    function renderResult(analysis) {
+        const a = analysis || AI_ANALYSIS[state.pain] || AI_ANALYSIS.other;
         const res = root.querySelector('.ai-step[data-s="result"]');
         res.innerHTML = `
           <div class="ai-result-head"><div class="ok"><i class="fa-solid fa-wand-magic-sparkles"></i></div><b>Ваш экспресс-разбор готов</b></div>
           <div class="ai-analysis-card">
-            <div class="a-tag"><i class="fa-solid fa-microchip"></i> AI-анализ · ${state.nicheT || 'ваша ниша'} · ${state.painT || ''}</div>
+            <div class="a-tag"><i class="fa-solid fa-microchip"></i> ${a.source === 'openrouter' ? 'OpenRouter AI-анализ' : 'AI-анализ'} · ${esc(state.nicheT || 'ваша ниша')} · ${esc(state.painT || '')}</div>
             <h5>Что происходит</h5>
-            <p>${a.d}</p>
+            <p>${esc(a.d)}</p>
             <h5>Что предлагаем сделать</h5>
-            <ul>${a.fix.map(f => `<li><i class="fa-solid fa-circle-check"></i> ${f}</li>`).join('')}</ul>
+            <ul>${a.fix.map(f => `<li><i class="fa-solid fa-circle-check"></i> ${esc(f)}</li>`).join('')}</ul>
             <div class="est">
-              <div><b>${a.eff[0]}</b><span>${a.eff[1]}</span></div>
+              <div><b>${esc(a.eff[0])}</b><span>${esc(a.eff[1])}</span></div>
               <div><b>Бесплатно</b><span>консультация и план</span></div>
             </div>
           </div>
@@ -455,6 +486,11 @@ function initAiFunnel(root) {
 
     function channelName(c){ return c==='wa'?'WhatsApp':c==='ph'?'Звонок':'Telegram'; }
     function enc(s){ return encodeURIComponent(s || ''); }
+    function esc(s) {
+        return String(s || '').replace(/[&<>'"]/g, char => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+        }[char]));
+    }
 }
 
 /* ==========================================================================
