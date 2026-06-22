@@ -500,20 +500,20 @@ const articlesData = {
     'article-1': { tag: 'Аналитика', title: 'Почему автосалоны теряют 60% заявок из-за сайтов?', content: `
         <p>Премиальный сегмент не терпит визуального шума и сложной навигации. Если клиент собирается отдать несколько миллионов за автомобиль или сотни тысяч за детейлинг, он ожидает соответствующего уровня сервиса ещё до звонка.</p>
         <div class="author-comment"><p>«Сайт — это ваша первая клиентская зона. Если там наливают растворимый кофе, до дивана никто не дойдёт.»</p>
-        <div class="author-comment-meta"><img src="img/tsukanov.jpg" alt="Максим Цуканов"><div class="author-meta-text"><span class="author-name">Максим Цуканов</span><span class="author-role">Основатель агентства</span></div></div></div>
+        <div class="author-comment-meta"><img src="/static/img/tsukanov.jpg" alt="Максим Цуканов"><div class="author-meta-text"><span class="author-name">Максим Цуканов</span><span class="author-role">Основатель агентства</span></div></div></div>
         <h3>Главные ошибки классических сайтов:</h3>
         <ul><li><strong>Долгий ответ.</strong> Клиент ждёт звонка менеджера. В 2026 это недопустимо.</li><li><strong>Перегруз интерфейса.</strong> Всплывающие окна и рулетки скидок отпугивают платёжеспособную аудиторию.</li><li><strong>Шаблонность.</strong> Конструкторы лишают бренд индивидуальности.</li></ul>
         <button onclick="closeArticle(); openContactModal();" class="btn btn-primary" style="margin-top:20px;">Обсудить внедрение системы</button>` },
     'article-2': { tag: 'Стратегия', title: 'Как дизайн позволяет поднять средний чек x2', content: `
         <p>Цена — это всегда вопрос восприятия. Почему за полировку в одном гараже платят 10 000 ₽, а в премиум-студии — 100 000 ₽? Разница в упаковке и эмоциях.</p>
         <div class="author-comment"><p>«Люди покупают уверенность в том, что их не подведут, и статус. Правильный дизайн транслирует это до того, как менеджер скажет первое слово.»</p>
-        <div class="author-comment-meta"><img src="img/tsukanov.jpg" alt="Максим Цуканов"><div class="author-meta-text"><span class="author-name">Максим Цуканов</span><span class="author-role">Основатель агентства</span></div></div></div>
+        <div class="author-comment-meta"><img src="/static/img/tsukanov.jpg" alt="Максим Цуканов"><div class="author-meta-text"><span class="author-name">Максим Цуканов</span><span class="author-role">Основатель агентства</span></div></div></div>
         <h3>Как мы это реализуем:</h3>
         <ul><li><strong>Отказ от стоковых фото.</strong> Только реальный процесс.</li><li><strong>Минимализм.</strong> Воздух в дизайне кричит о статусе.</li><li><strong>Премиальная палитра.</strong> Ассоциации с Apple, Mercedes, Aesop.</li></ul>` },
     'article-3': { tag: 'Vision 2026', title: 'Тренды автоматизации: Интерактивный Web', content: `
         <p>Эпоха статичных сайтов-визиток закончилась. Сегодня сайт — это полноценное ПО, работающее в браузере.</p>
         <div class="author-comment"><p>«Если ваш сайт просто показывает картинки и просит телефон — вы используете 5% потенциала. Современный Web интегрируется в CRM, склады, отзывы и оплаты.»</p>
-        <div class="author-comment-meta"><img src="img/tsukanov.jpg" alt="Максим Цуканов"><div class="author-meta-text"><span class="author-name">Максим Цуканов</span><span class="author-role">Основатель агентства</span></div></div></div>
+        <div class="author-comment-meta"><img src="/static/img/tsukanov.jpg" alt="Максим Цуканов"><div class="author-meta-text"><span class="author-name">Максим Цуканов</span><span class="author-role">Основатель агентства</span></div></div></div>
         <h3>Что работает сегодня:</h3>
         <ul><li><strong>Мгновенная синхронизация</strong> сайта, базы и Telegram-бота.</li><li><strong>Glassmorphism и Ambient Light.</strong> Эффект осязаемости интерфейса.</li><li><strong>Личные кабинеты</strong> со статусами заказов и отзывами на Карты.</li></ul>
         <button onclick="closeArticle(); openContactModal();" class="btn btn-primary" style="margin-top:20px;">Построить экосистему</button>` }

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Упаковка Авито «в фарш»: обложки и воронки с высоким CTR | TSUKANOV.</title>
     <meta name="description" content="Продающие обложки для Авито, прошивка текстов под алгоритмы, воронки и оформление магазина под ключ. Реальные кейсы: цена контакта от 54 ₽, рост заявок до +1200%.">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=12.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=12.0">
 </head>
 <body data-theme="dark" class="has-topbar">
 
@@ -27,14 +27,14 @@
 
     <header>
         <div class="container header-inner">
-            <a href="index.html" class="logo">TSUKANOV<span>.</span></a>
+            <a href="{{ url_for('index') }}" class="logo">TSUKANOV<span>.</span></a>
             <nav class="nav-links">
                 <div class="nav-item">
-                    <a href="index.html#services" class="nav-link has-dd">Услуги</a>
+                    <a href="{{ url_for('index') }}#services" class="nav-link has-dd">Услуги</a>
                     <div class="nav-dd">
-                        <a href="sites.html"><i class="fa-solid fa-window-maximize"></i><span><span class="dd-t">Сайты и платформы</span><span class="dd-s">Чистый код, CRM, ИИ</span></span></a>
-                        <a href="avito.html"><i class="fa-solid fa-bullhorn"></i><span><span class="dd-t">Упаковка Авито</span><span class="dd-s">Вы здесь</span></span></a>
-                        <a href="geo.html"><i class="fa-solid fa-map-location-dot"></i><span><span class="dd-t">Геосервисы</span><span class="dd-s">Яндекс.Карты и 2ГИС</span></span></a>
+                        <a href="{{ url_for('sites') }}"><i class="fa-solid fa-window-maximize"></i><span><span class="dd-t">Сайты и платформы</span><span class="dd-s">Чистый код, CRM, ИИ</span></span></a>
+                        <a href="{{ url_for('avito') }}"><i class="fa-solid fa-bullhorn"></i><span><span class="dd-t">Упаковка Авито</span><span class="dd-s">Вы здесь</span></span></a>
+                        <a href="{{ url_for('geo') }}"><i class="fa-solid fa-map-location-dot"></i><span><span class="dd-t">Геосервисы</span><span class="dd-s">Яндекс.Карты и 2ГИС</span></span></a>
                     </div>
                 </div>
                 <a href="#results" class="nav-link">Результаты</a>
@@ -50,12 +50,12 @@
 
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-close" onclick="toggleMenu()">&times;</button>
-        <a href="index.html" class="mobile-link">ГЛАВНАЯ</a>
+        <a href="{{ url_for('index') }}" class="mobile-link">ГЛАВНАЯ</a>
         <a href="#results" class="mobile-link" onclick="toggleMenu()">РЕЗУЛЬТАТЫ</a>
         <a href="#cases" class="mobile-link" onclick="toggleMenu()">КЕЙСЫ</a>
         <a href="#pricing" class="mobile-link" onclick="toggleMenu()">ЦЕНЫ</a>
-        <a href="sites.html" class="mobile-link">САЙТЫ</a>
-        <a href="geo.html" class="mobile-link">ГЕОСЕРВИСЫ</a>
+        <a href="{{ url_for('sites') }}" class="mobile-link">САЙТЫ</a>
+        <a href="{{ url_for('geo') }}" class="mobile-link">ГЕОСЕРВИСЫ</a>
         <div class="mobile-theme-wrapper"><a href="#ai" onclick="toggleMenu()" class="btn btn-primary" style="width:100%;">БЕСПЛАТНЫЙ РАЗБОР</a></div>
     </div>
 
@@ -65,7 +65,7 @@
         <!-- HERO -->
         <section class="svc-hero">
             <div class="container">
-                <div class="breadcrumb reveal"><a href="index.html">Главная</a> <span class="sep">/</span> <span>Упаковка Авито</span></div>
+                <div class="breadcrumb reveal"><a href="{{ url_for('index') }}">Главная</a> <span class="sep">/</span> <span>Упаковка Авито</span></div>
                 <div class="svc-hero-grid">
                     <div class="reveal">
                         <div class="svc-hero-eyebrow"><span class="line"></span> Маркетплейс · Авито</div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="reveal delay-1">
                         <div class="svc-hero-visual">
-                            <img src="img/Авито_Шумоизоляция_Авто.png" alt="Обложка Авито" onerror="this.src='img/avito_1.webp'">
+                            <img src="{{ url_for('static', filename='img/Авито_Шумоизоляция_Авто.png') }}" alt="Обложка Авито" onerror="this.src='{{ url_for('static', filename='img/avito_1.webp') }}'">
                             <div class="glass-tag">
                                 <i class="fa-solid fa-bullhorn"></i>
                                 <div><b>Wills Details</b><span>Премиум-детейлинг — визуальное доминирование в выдаче</span></div>
@@ -138,15 +138,15 @@
                 </div>
                 <div class="proofs-grid reveal delay-1">
                     <div class="proof-card">
-                        <img src="img/avitoproof1.jpg" alt="Кейс 1">
+                        <img src="{{ url_for('static', filename='img/avitoproof1.jpg') }}" alt="Кейс 1">
                         <div class="proof-text"><div class="ui-badge dark">Авто · с нуля</div><h4>Ремонт ЭБУ отопителей</h4><p>Запуск аккаунта с нуля. 0 отзывов на старте — выстроили доверие через визуал и смыслы. Пошли первые целевые заявки.</p></div>
                     </div>
                     <div class="proof-card">
-                        <img src="img/avitoproof2.jpg" alt="Кейс 2">
+                        <img src="{{ url_for('static', filename='img/avitoproof2.jpg') }}" alt="Кейс 2">
                         <div class="proof-text"><div class="ui-badge dark">Beauty</div><h4>Рост заявок +1200%</h4><p><strong>254 просмотра (+206%), 22 заявки за неделю. Контакт — 79 ₽.</strong> В нише, где «нет клиентов», сделали стабильный поток.</p></div>
                     </div>
                     <div class="proof-card">
-                        <img src="img/avitoproof3.jpg" alt="Кейс 3">
+                        <img src="{{ url_for('static', filename='img/avitoproof3.jpg') }}" alt="Кейс 3">
                         <div class="proof-text"><div class="ui-badge dark">Авторемонт</div><h4>Цена лида ×2 ниже</h4><p><strong>553 просмотра (+22%), 45 контактов. Заявка → 54 ₽.</strong> Снизили цену контакта с ~90 ₽ до 54 ₽ при том же бюджете.</p></div>
                     </div>
                 </div>
@@ -168,18 +168,18 @@
                     <p>Так выглядят объявления, на которые кликают именно вас.</p>
                 </div>
                 <div class="masonry reveal delay-1">
-                    <div class="m-item"><img src="img/avito_1.webp" alt="Wills Details"><div class="m-cap"><b>Wills Details</b><span>Премиум-детейлинг</span></div></div>
-                    <div class="m-item"><img src="img/Авито_Шумоизоляция_4двери_ПОЛНАЯ.png" alt="Шумоизоляция"><div class="m-cap"><b>Шумоизоляция авто</b><span>Полный пакет</span></div></div>
-                    <div class="m-item"><img src="img/avito_3.webp" alt="Обложка"></div>
-                    <div class="m-item"><img src="img/Авито_РУЛЬ_ПЕРЕТЯЖКА.png" alt="Перетяжка руля"><div class="m-cap"><b>Перетяжка руля</b><span>Авто-ателье</span></div></div>
-                    <div class="m-item"><img src="img/avito_6.webp" alt="Обложка"></div>
-                    <div class="m-item"><img src="img/Авито_ПОДСВЕТКА.png" alt="Подсветка салона"><div class="m-cap"><b>Подсветка салона</b><span>Авто-тюнинг</span></div></div>
-                    <div class="m-item"><img src="img/avito_8.webp" alt="Обложка"></div>
-                    <div class="m-item"><img src="img/avito_11.webp" alt="Check Expert"><div class="m-cap"><b>Check Expert</b><span>Автоподбор и проверка</span></div></div>
-                    <div class="m-item"><img src="img/avito_4.webp" alt="Обложка"></div>
-                    <div class="m-item"><img src="img/avito_13.webp" alt="Обложка"></div>
-                    <div class="m-item"><img src="img/avito_9.webp" alt="Обложка"></div>
-                    <div class="m-item"><img src="img/avito_15.webp" alt="Обложка"></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_1.webp') }}" alt="Wills Details"><div class="m-cap"><b>Wills Details</b><span>Премиум-детейлинг</span></div></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/Авито_Шумоизоляция_4двери_ПОЛНАЯ.png') }}" alt="Шумоизоляция"><div class="m-cap"><b>Шумоизоляция авто</b><span>Полный пакет</span></div></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_3.webp') }}" alt="Обложка"></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/Авито_РУЛЬ_ПЕРЕТЯЖКА.png') }}" alt="Перетяжка руля"><div class="m-cap"><b>Перетяжка руля</b><span>Авто-ателье</span></div></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_6.webp') }}" alt="Обложка"></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/Авито_ПОДСВЕТКА.png') }}" alt="Подсветка салона"><div class="m-cap"><b>Подсветка салона</b><span>Авто-тюнинг</span></div></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_8.webp') }}" alt="Обложка"></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_11.webp') }}" alt="Check Expert"><div class="m-cap"><b>Check Expert</b><span>Автоподбор и проверка</span></div></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_4.webp') }}" alt="Обложка"></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_13.webp') }}" alt="Обложка"></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_9.webp') }}" alt="Обложка"></div>
+                    <div class="m-item"><img src="{{ url_for('static', filename='img/avito_15.webp') }}" alt="Обложка"></div>
                 </div>
             </div>
         </section>
@@ -262,7 +262,7 @@
         <div class="container">
             <div class="footer-cols">
                 <div class="footer-brand-col">
-                    <a href="index.html" class="logo">TSUKANOV<span>.</span></a>
+                    <a href="{{ url_for('index') }}" class="logo">TSUKANOV<span>.</span></a>
                     <p style="color:var(--text-muted);font-size:14px;max-width:280px;">Digital-агентство и архитектура брендов. Делаем так, чтобы у вас покупали дорого.</p>
                     <div class="footer-soc">
                         <a href="https://t.me/Maxicosss" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
@@ -270,7 +270,7 @@
                         <a href="tel:+79385557584" aria-label="Телефон"><i class="fa-solid fa-phone"></i></a>
                     </div>
                 </div>
-                <div><h5>Услуги</h5><a href="sites.html">Сайты и платформы</a><a href="avito.html">Упаковка Авито</a><a href="geo.html">Геосервисы</a></div>
+                <div><h5>Услуги</h5><a href="{{ url_for('sites') }}">Сайты и платформы</a><a href="{{ url_for('avito') }}">Упаковка Авито</a><a href="{{ url_for('geo') }}">Геосервисы</a></div>
                 <div><h5>На этой странице</h5><a href="#results">Результаты</a><a href="#cases">Кейсы</a><a href="#pricing">Цены</a><a href="#ai">AI-разбор</a></div>
                 <div><h5>Контакты</h5><a href="https://t.me/Maxicosss" target="_blank">Telegram: @Maxicosss</a><a href="https://wa.me/79385557584" target="_blank">WhatsApp</a><a href="tel:+79385557584">+7 938 555-75-84</a></div>
             </div>
@@ -291,6 +291,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=12.2"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=12.2"></script>
 </body>
 </html>

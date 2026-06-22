@@ -3,12 +3,12 @@ import os
 from pathlib import Path
 from urllib import error, request
 
-from flask import Flask, jsonify, request as flask_request, send_from_directory
+from flask import Flask, jsonify, redirect, render_template, request as flask_request, url_for
 
 BASE_DIR = Path(__file__).resolve().parent
 OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions'
 
-app = Flask(__name__, static_folder=None)
+app = Flask(__name__)
 
 
 def load_env(path: Path = BASE_DIR / '.env') -> None:
@@ -119,15 +119,30 @@ def ai_diagnosis():
 
 @app.get('/')
 def index():
-    return send_from_directory(BASE_DIR, 'index.html')
+    return render_template('index.html')
 
 
-@app.get('/<path:path>')
-def static_files(path: str):
-    target = BASE_DIR / path
-    if target.is_file():
-        return send_from_directory(BASE_DIR, path)
-    return send_from_directory(BASE_DIR, 'index.html')
+@app.get('/sites')
+@app.get('/sites.html')
+def sites():
+    return render_template('sites.html')
+
+
+@app.get('/avito')
+@app.get('/avito.html')
+def avito():
+    return render_template('avito.html')
+
+
+@app.get('/geo')
+@app.get('/geo.html')
+def geo():
+    return render_template('geo.html')
+
+
+@app.get('/favicon.png')
+def favicon():
+    return redirect(url_for('static', filename='favicon.png'))
 
 
 if __name__ == '__main__':
