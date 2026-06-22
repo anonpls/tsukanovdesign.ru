@@ -9,4 +9,4 @@ project_dir = '/var/www/u3354621/data/www/tsukanovdesign.ru'
 sys.path.insert(0, project_dir)
 os.chdir(project_dir)
 
-from app import application
+from app import app as application
